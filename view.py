@@ -11,8 +11,7 @@ con = lite.connect('dados.db')
 def inserir_form(i):
     with con:
         cur = con.cursor()
-        query = "INSERT INTO INVENTARIO (NOME, LOCAL, DESCRICAO, MARCA, DATA_DA_COMPRA, " \
-                "VALOR_DA_COMPRA, SERIE, IMAGEM) VALUES (?,?,?,?,?,?,?,?)"
+        query = "INSERT INTO INVENTARIO (NOME, LOCAL, DESCRICAO, MARCA, DATA_DA_COMPRA, VALOR_DA_COMPRA, SERIE, IMAGEM) VALUES (?,?,?,?,?,?,?,?)"
         cur.execute(query, i)
 
 # funcao para deletar um registro/LINHA/TUPLA
@@ -30,8 +29,7 @@ def deletar_form(i):
 def atualizar_form(i):
     with con:
          cur = con.cursor()
-         query = "UPDATE INVENTARIO SET NOME=?, LOCAL=?, DESCRICAO=?, MARCA=?," \
-                 "DATA_DA_COMPRA=?, VALOR_DA_COMPRA=?, SERIE=?, IMAGEM=? WHERE ID=?",
+         query = "UPDATE INVENTARIO SET NOME=?, LOCAL=?, DESCRICAO=?, MARCA=?, DATA_DA_COMPRA=?, VALOR_DA_COMPRA=?, SERIE=?, IMAGEM=? WHERE ID=?"
          cur.execute(query, i)
 
 # funcao para ver todos os itens do inventário
